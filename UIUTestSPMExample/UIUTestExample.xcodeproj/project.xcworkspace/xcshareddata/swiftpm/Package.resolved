@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "UIUTest",
+        "repositoryURL": "https://github.com/nallick/UIUTest.git",
+        "state": {
+          "branch": null,
+          "revision": "f5c04ab82cc118ffc2818b0c8c607eed0fc1e381",
+          "version": "1.4.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
