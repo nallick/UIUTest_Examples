@@ -1,0 +1,10 @@
+.DS_Store
+UIUTestBDDExample/Pods/Pods.xcodeproj/xcuserdata/*
+UIUTestBDDExample/UIUTestExample.xcworkspace/xcuserdata/*
+UIUTestCocoaPodsExample/Pods/Pods.xcodeproj/xcuserdata/*
+UIUTestCocoaPodsExample/UIUTestExample.xcodeproj/xcuserdata/*
+UIUTestCocoaPodsExample/UIUTestExample.xcodeproj/project.xcworkspace/xcuserdata/*
+UIUTestCocoaPodsExample/UIUTestExample.xcworkspace/xcuserdata/*
+UIUTestSPMExample/UIUTestExample.xcodeproj/project.xcworkspace/xcuserdata/*
+UIUTestSPMExample/UIUTestExample.xcodeproj/xcuserdata/*
+Presentation/*
