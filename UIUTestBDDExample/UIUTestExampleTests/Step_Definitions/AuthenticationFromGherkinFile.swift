@@ -19,7 +19,6 @@ extension Cucumber {
         var passwordField: UITextField!
         var showPasswordButton: UIButton!
         var authenticateButton: UIButton!
-        var invalidCredentialsLabel: UILabel!
 
         MatchAll("^I am not logged in$") { _, _ in
             viewController = (UIViewController.loadFromStoryboard(identifier: "Authentication") as! AuthenticationViewController)
@@ -28,7 +27,6 @@ extension Cucumber {
             passwordField = (view.viewWithAccessibilityIdentifier("password") as! UITextField)
             showPasswordButton = (view.viewWithAccessibilityIdentifier("showPassword") as! UIButton)
             authenticateButton = (view.viewWithAccessibilityIdentifier("authenticate") as! UIButton)
-            invalidCredentialsLabel = (view.viewWithAccessibilityIdentifier("invalidCredentials") as! UILabel)
             XCTAssertFalse(authenticateButton.isEnabled)
         }
         When("^I enter a valid username$") { _, _ in
