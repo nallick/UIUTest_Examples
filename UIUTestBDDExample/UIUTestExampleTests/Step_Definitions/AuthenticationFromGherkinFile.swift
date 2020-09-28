@@ -12,18 +12,6 @@ import UIUTest
 import XCTest
 import UIUTestExample
 
-struct TestAuthenticator: Authenticator
-{
-    static let validUser = "Test User"
-    static let invalidUser = "Invalid User"
-    static let validPassword = "Test Password"
-    static let invalidPassword = "Invalid Password"
-    
-    func authenticate(user: String, password: String) -> Bool {
-        return (user == TestAuthenticator.validUser && password == TestAuthenticator.validPassword)
-    }
-}
-
 extension Cucumber {
     func setupAuthenticationTests() {
         var viewController: AuthenticationViewController!

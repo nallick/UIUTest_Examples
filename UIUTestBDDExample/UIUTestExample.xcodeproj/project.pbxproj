@@ -25,7 +25,9 @@
 		8E381D5E670EED0B2BA006DC /* Pods_UIUTestExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C0EB2299B7315E9B5B563D /* Pods_UIUTestExampleTests.framework */; };
 		AD99DB5B2133497C00E57823 /* Features in Resources */ = {isa = PBXBuildFile; fileRef = AD99DB5A2133497700E57823 /* Features */; };
 		AD99DB5D21334D2800E57823 /* CucumberTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD99DB5C21334D2800E57823 /* CucumberTests.swift */; };
-		AD99DB6021334D5000E57823 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD99DB5F21334D5000E57823 /* Authentication.swift */; };
+		AD99DB6021334D5000E57823 /* AuthenticationFromGherkinFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD99DB5F21334D5000E57823 /* AuthenticationFromGherkinFile.swift */; };
+		CA571B5125227C370002D19A /* AuthenticationDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA571B5025227C370002D19A /* AuthenticationDSL.swift */; };
+		CA571B5525227C530002D19A /* TestAuthenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA571B5425227C530002D19A /* TestAuthenticator.swift */; };
 		D1AC973D0D54D9C95EB42AA5 /* Pods_UIUTestExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C08288D10456E19BC088E068 /* Pods_UIUTestExample.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,8 +56,10 @@
 		664BAE291D419502044471C9 /* Pods-UIUTestExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIUTestExampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UIUTestExampleTests/Pods-UIUTestExampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		AD99DB5A2133497700E57823 /* Features */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Features; sourceTree = "<group>"; };
 		AD99DB5C21334D2800E57823 /* CucumberTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CucumberTests.swift; sourceTree = "<group>"; };
-		AD99DB5F21334D5000E57823 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
+		AD99DB5F21334D5000E57823 /* AuthenticationFromGherkinFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationFromGherkinFile.swift; sourceTree = "<group>"; };
 		C08288D10456E19BC088E068 /* Pods_UIUTestExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UIUTestExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA571B5025227C370002D19A /* AuthenticationDSL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationDSL.swift; sourceTree = "<group>"; };
+		CA571B5425227C530002D19A /* TestAuthenticator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAuthenticator.swift; sourceTree = "<group>"; };
 		D1436C3D90C9E895E2892341 /* Pods-UIUTestExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIUTestExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UIUTestExample/Pods-UIUTestExample.debug.xcconfig"; sourceTree = "<group>"; };
 		D5C0EB2299B7315E9B5B563D /* Pods_UIUTestExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UIUTestExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -127,6 +131,7 @@
 				AD99DB5A2133497700E57823 /* Features */,
 				010B1BB7201D924E00448B0E /* Info.plist */,
 				AD99DB5C21334D2800E57823 /* CucumberTests.swift */,
+				CA571B5425227C530002D19A /* TestAuthenticator.swift */,
 			);
 			path = UIUTestExampleTests;
 			sourceTree = "<group>";
@@ -155,7 +160,8 @@
 		AD99DB5E21334D4400E57823 /* Step_Definitions */ = {
 			isa = PBXGroup;
 			children = (
-				AD99DB5F21334D5000E57823 /* Authentication.swift */,
+				AD99DB5F21334D5000E57823 /* AuthenticationFromGherkinFile.swift */,
+				CA571B5025227C370002D19A /* AuthenticationDSL.swift */,
 			);
 			path = Step_Definitions;
 			sourceTree = "<group>";
@@ -358,7 +364,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD99DB5D21334D2800E57823 /* CucumberTests.swift in Sources */,
-				AD99DB6021334D5000E57823 /* Authentication.swift in Sources */,
+				CA571B5525227C530002D19A /* TestAuthenticator.swift in Sources */,
+				AD99DB6021334D5000E57823 /* AuthenticationFromGherkinFile.swift in Sources */,
+				CA571B5125227C370002D19A /* AuthenticationDSL.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,7 +10,7 @@ Feature: Authentication
     Scenario: I want to know if I can't sign in
         Given I am not logged in
         When I have not entered a valid username
-            Or I have not entered a valid password
+            And I have not entered a valid password
         Then I can't sign in
 
     Scenario: I want to see my password

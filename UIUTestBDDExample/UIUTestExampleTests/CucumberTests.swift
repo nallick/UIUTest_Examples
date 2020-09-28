@@ -19,6 +19,7 @@ extension Cucumber: StepImplementation {
 		UIViewController.initializeTestable()
 
 		setupAuthenticationTests()
+        AuthenticationDSLSteps().setup()
     }
 }
 
