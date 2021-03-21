@@ -1,7 +1,7 @@
 //
 //  TableViewControllerTests.swift
 //
-//  Copyright © 2017-2018 Purgatory Design. Licensed under the MIT License.
+//  Copyright © 2017-2021 Purgatory Design. Licensed under the MIT License.
 //
 
 import XCTest
@@ -16,7 +16,6 @@ class TableViewControllerTests: XCTestCase
     override func setUp() {
         super.setUp()
 
-        UIViewController.initializeTestable()
 		viewController = (UIViewController.loadFromStoryboard(identifier: "TableViewController") as! TableViewController)
         tableView = viewController.tableView!
     }

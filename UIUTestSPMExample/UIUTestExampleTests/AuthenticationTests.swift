@@ -1,7 +1,7 @@
 //
 //  AuthenticationTests.swift
 //
-//  Copyright © 2017-2018 Purgatory Design. Licensed under the MIT License.
+//  Copyright © 2017-2021 Purgatory Design. Licensed under the MIT License.
 //
 
 import XCTest
@@ -30,8 +30,6 @@ class AuthenticationTests: XCTestCase
 
     override func setUp() {
         super.setUp()
-
-        UIViewController.initializeTestable()
 		initializeTest()
 	}
 
@@ -50,6 +48,14 @@ class AuthenticationTests: XCTestCase
 		invalidCredentialsLabel = (view.viewWithAccessibilityIdentifier("invalidCredentials") as! UILabel)
 	}
 
+    func testTextFieldDoesNotRecognizeTapWhenDisabled() {
+        userNameField.isEnabled = true
+        XCTAssertTrue(userNameField.willRespondToUser)
+
+        userNameField.isEnabled = false
+        XCTAssertFalse(userNameField.willRespondToUser)
+    }
+    
     func testAuthenticateEnabled() {
         XCTAssertFalse(authenticateButton.isEnabled)
 

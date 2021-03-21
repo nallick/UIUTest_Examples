@@ -1,7 +1,7 @@
 //
 //  InfoViewControllerTests.swift
 //
-//  Copyright © 2017-2019 Purgatory Design. Licensed under the MIT License.
+//  Copyright © 2017-2021 Purgatory Design. Licensed under the MIT License.
 //
 
 import XCTest
@@ -16,7 +16,6 @@ class InfoViewControllerTests: XCTestCase
         super.setUp()
 		self.continueAfterFailure = false
 
-        UIViewController.initializeTestable()
 		viewController = (UIViewController.loadFromStoryboard(identifier: "InfoViewController") as! InfoViewController)
 		view = viewController.view!
     }

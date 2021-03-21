@@ -1,7 +1,7 @@
 //
 //  ToolbarViewControllerTests.swift
 //
-//  Copyright © 2018 Purgatory Design. Licensed under the MIT License.
+//  Copyright © 2018-2021 Purgatory Design. Licensed under the MIT License.
 //
 
 import XCTest
@@ -17,7 +17,6 @@ class ToolbarViewControllerTests: XCTestCase
 	override func setUp() {
 		super.setUp()
 
-		UIViewController.initializeTestable()
 		viewController = (UIViewController.loadFromStoryboard(identifier: "ToolbarViewController") as! ToolbarViewController)
 		view = viewController.view!
 	}

@@ -1,7 +1,7 @@
 //
 //  SwitchesViewControllerTests.swift
 //
-//  Copyright © 2017-2018 Purgatory Design. Licensed under the MIT License.
+//  Copyright © 2017-2021 Purgatory Design. Licensed under the MIT License.
 //
 
 import XCTest
@@ -15,7 +15,6 @@ class SwitchesViewControllerTests: XCTestCase
     override func setUp() {
         super.setUp()
 
-        UIViewController.initializeTestable()
         let viewController = UIViewController.loadFromStoryboard(identifier: "SwitchesViewController") as! SwitchesViewController
 		view = viewController.view!
     }

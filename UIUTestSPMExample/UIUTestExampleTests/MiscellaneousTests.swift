@@ -1,9 +1,9 @@
 //
 //  MiscellaneousTests.swift
 //
-//	These tests are mostly just here to get the code coverage to 100%.
+//	These tests are mostly just here to test UIUTest itself or get the code coverage to 100%.
 //
-//  Copyright © 2018 Purgatory Design. Licensed under the MIT License.
+//  Copyright © 2018-2021 Purgatory Design. Licensed under the MIT License.
 //
 
 import XCTest
@@ -27,4 +27,38 @@ class MiscellaneousTests: XCTestCase
 
 		XCTAssertTrue(defaultAuthenticator.authenticate(user: DefaultAuthenticator.validUser, password: DefaultAuthenticator.validPassword))
 	}
+
+    func testViewControllerEndsLifecycleWhenTestArtifactsAreFlushed() {
+        let viewController = SpyViewController()
+        viewController.loadForTesting()
+        RunLoop.current.singlePass()
+        RunLoop.current.singlePass()
+
+        XCTAssertEqual(viewController.viewDidAppearCount, 1)
+        XCTAssertEqual(viewController.viewDidDisappearCallCount, 0)
+
+        UIViewController.flushPendingTestArtifacts()
+
+        XCTAssertEqual(viewController.viewDidAppearCount, 1)
+        XCTAssertEqual(viewController.viewDidDisappearCallCount, 1)
+    }
+}
+
+extension MiscellaneousTests
+{
+    class SpyViewController: UIViewController
+    {
+        var viewDidAppearCount = 0
+        var viewDidDisappearCallCount = 0
+
+        override func viewDidAppear(_ animated: Bool) {
+            super.viewDidAppear(animated)
+            self.viewDidAppearCount += 1
+        }
+
+        override func viewDidDisappear(_ animated: Bool) {
+            super.viewDidDisappear(animated)
+            self.viewDidDisappearCallCount += 1
+        }
+    }
 }

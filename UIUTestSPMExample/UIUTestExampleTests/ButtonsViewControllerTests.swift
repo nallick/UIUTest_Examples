@@ -1,7 +1,7 @@
 //
 //  ButtonsViewControllerTests.swift
 //
-//  Copyright © 2017-2018 Purgatory Design. Licensed under the MIT License.
+//  Copyright © 2017-2021 Purgatory Design. Licensed under the MIT License.
 //
 
 import XCTest
@@ -9,11 +9,6 @@ import UIUTestExample
 
 class ButtonsViewControllerTests: XCTestCase
 {
-    override func setUp() {
-        super.setUp()
-        UIViewController.initializeTestable()
-    }
-
 	override func tearDown() {
 		super.tearDown()
 		UIViewController.flushPendingTestArtifacts()

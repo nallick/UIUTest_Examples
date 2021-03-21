@@ -1,9 +1,8 @@
 //
 //  MapViewControllerTests.swift
-//  UIUTestExampleTests
 //
 //  Created by Tyler Thompson on 5/28/19.
-//  Copyright © 2019 Purgatory Design. All rights reserved.
+//  Copyright © 2019-2021 Purgatory Design. All rights reserved.
 //
 
 import Foundation
@@ -21,7 +20,6 @@ class MapViewControllerTests: XCTestCase {
     override func setUp() {
         super.setUp()
         continueAfterFailure = false
-        UIViewController.initializeTestable()
         viewController = UIViewController.loadFromStoryboard(identifier: "MapViewController") as? MapViewController
         view = viewController.view!
     }
